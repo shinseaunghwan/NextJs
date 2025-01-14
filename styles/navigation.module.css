@@ -1,10 +1,10 @@
 .nav {
-    background-color: #2d2d2d;
+    background-color: #00000063;
     position: fixed;
     width: 30%;
     margin: 0 auto;
     top: 20px;
-    border-radius: 50px;
+    border-radius: 10px;
     padding: 20px 0px;
     left: 50%;
     z-index: 10;
@@ -24,7 +24,7 @@
   }
   
   .nav ul li:hover {
-    transform: scale(1.05);
+    /* transform: scale(1.05); */
   }
 
   @media screen and (max-width: 1024px) {
