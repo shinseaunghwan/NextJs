@@ -13,6 +13,7 @@ export default function AboutUs() {
         
               <Link href="/naverApi/search">네이버 이미지 검색</Link>
               <Link href="/naverApi/news">네이버 뉴스 검색</Link> 
+              <Link href="/naverApi/books">네이버 서적 검색</Link> 
       </div>
     </div>
   );
