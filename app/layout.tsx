@@ -1,13 +1,14 @@
 import "../styles/global.css"
 import { Metadata } from "next";
 import Navigation from "../components/navigation";
+import layout from "../styles/layout.module.css"
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | Next Movies",
-    default: "Next Movies",
+    template: "%s | NextJs",
+    default: "NextJs",
   },
-  description: "The best movies on the best framework",
+  description: "NextJs framework",
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -15,7 +16,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <html lang="en">
       <body>
         <Navigation />
-        {children}
+        <div className={layout.container}>{children}</div>
       </body>
     </html>
   );

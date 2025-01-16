@@ -35,6 +35,7 @@ export default function SearchForm() {
       <button onClick={handleSearch}>검색</button>
 
       <div className={search.container}>
+        
         {results.map((item) => (
           <div className={search.imgBox} key={item.link}>
             <img src={item.thumbnail} alt={item.title} />

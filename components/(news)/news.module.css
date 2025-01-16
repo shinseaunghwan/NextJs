@@ -1,0 +1,96 @@
+.inputBox {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+    text-align: left;
+  }
+
+  .container .newsBox {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    flex: 1 0 45%;
+    margin-top: 1rem;
+    box-shadow: rgb(163 163 163) 0px 0px 5px;
+    border-radius: 10px;
+    padding: 1rem;
+  }
+
+  .container .newsBox h4{
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+  .container .newsBox .text{
+    margin: .5rem 0;
+  }
+  .container .newsBox p{
+    font-size: 1rem;
+  }
+  .container .newsBox .date{
+    text-align: right;
+  }
+  .container .newsBox .datelinkBox{
+    margin-top: auto;
+    text-align: right;
+  }
+  .container .newsBox .datelinkBox a{
+    margin-top: .5rem;
+    display: inline-block;
+    padding: 8px 16px;
+    font-size: 16px;
+    border-width: 1px;
+    border-radius: 8px;
+    border: none;
+    background-color: #FF5555;
+    font-weight: 700;
+    color: #fff;
+    box-shadow: 2px 2px 2px #eee;
+    cursor: pointer;
+    transition: all .35s;
+  }
+  .container .newsBox .datelinkBox a:hover{
+    background-color: #dd0000;
+  }
+
+  @media screen and (max-width: 1024px) {
+
+  }
+
+  @media screen and (max-width: 768px) {
+
+  }
+
+  @media screen and (max-width: 640px) {
+    .container .newsBox {flex: 1 0 100%;}
+  }
+
+
+  @media screen and (max-width: 480px) {
+
+    .inputBox button{
+     width: 50%;
+      margin-top: 1rem;
+    }
+
+    .container .newsBox .datelinkBox{
+      text-align: center;
+    }
+    .container .newsBox .date{
+      text-align: center;
+    }
+  }
+
+  @media screen and (max-width: 360px) {
+
+
+  }

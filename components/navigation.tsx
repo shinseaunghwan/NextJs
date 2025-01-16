@@ -20,7 +20,7 @@ export default function Navigation() {
           <Link href="/movies">Moives</Link> {path === "/movies" ? " ✔" : ""}
         </li>
         <li>
-          <Link href="/search">Search</Link> {path === "/search" ? " ✔" : ""}
+          <Link href="/naverApi">Api</Link> {path === "/naverApi" ? " ✔" : ""}
         </li>
       </ul>
     </nav>
