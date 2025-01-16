@@ -152,8 +152,9 @@ a:hover {
   transition: all .35s;
 }
 
+
 @media screen and (max-width: 480px) {
   body {
-    padding-top: 3rem;
+    padding-top: 6rem;
   }
 }

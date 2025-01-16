@@ -1,0 +1,80 @@
+.container {
+    max-width: 90%;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .container h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+
+  .container > div {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    color: #111;
+  }
+  .container > div + div {
+    margin-top: 2rem;
+  }
+
+  .container > div button {
+    padding: 8px 16px;
+    font-size: 16px;
+    border-width: 1px;
+    border-radius: 8px;
+    border: none;
+    background-color: #627df3;
+    font-weight: 500;
+    color: #fff;
+    box-shadow: 2px 2px 2px #eee;
+    cursor: pointer;
+    transition: all .35s;
+  
+  }
+.container > div input {
+    padding: 8px 16px;
+    font-size: 16px;
+    border-width: 1px;
+    border-radius: 8px;
+    margin-right:10px;
+    font-weight: 500;
+    color: #111;
+    box-shadow: 2px 2px 2px #eee;
+    transition: all .35s;
+  
+  }
+
+  .container > div button:hover {
+    background-color: #2b48c5;
+} 
+    .container p {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+
+  @media screen and (max-width: 1024px) {
+    .container {
+ 
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .container {
+
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .container {
+
+    }
+  }
+
+  @media screen and (max-width: 360px) {
+    .container {
+ 
+    }
+  }

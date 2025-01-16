@@ -4,6 +4,7 @@ import MovieVideos from "../../../../components/movie-videos";
 import MovieSimilar from "../../../../components/movie-similar";
 import MovieCredits from "../../../../components/movie-credits";
 
+
 type IParams = Promise<{ id: string }>
 
 export async function generateMetadata(props: { params: IParams }) {
@@ -18,7 +19,7 @@ export default async function MovieDetail(props: { params: IParams }) {
   const params = await props.params;
   const id = params.id;
   return (
-    <div style={{padding: "1rem 0 5rem"}}>
+    <div>
             <Suspense fallback={<h1>Loading movie info</h1>}>
         <MovieInfo id={id} />
       </Suspense>

@@ -24,7 +24,7 @@ export default function MovieList({ id }) {
       speed={1000}
       spaceBetween={50}
       slidesPerView={4}
-      autoplay={{ delay: 5000 }}
+      autoplay={{ delay: 15000 }}
       scrollbar={{ draggable: true }}
       breakpoints={{
         0: {

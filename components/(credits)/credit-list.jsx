@@ -2,7 +2,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { A11y, Autoplay } from "swiper/modules";
 import { useEffect, useState } from "react";
-import { getCredits } from "../(credits)/getCredits";
+import { getCredits } from "./getCredits";
 import "swiper/css";
 import "swiper/css/scrollbar";
 import "swiper/css/autoplay";

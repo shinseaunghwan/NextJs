@@ -1,7 +1,7 @@
 .nav {
     background-color: #00000063;
     position: fixed;
-    width: 30%;
+    width: 50%;
     margin: 0 auto;
     top: 20px;
     border-radius: 10px;
@@ -14,10 +14,11 @@
   .nav ul {
     display: flex;
     justify-content: center;
-    gap: 50px;
   }
   
   .nav ul li {
+    flex: 1;
+    text-align: center;
     list-style: none;
     transform: none;
     transition: all 0.1s ease-in-out;
@@ -29,4 +30,8 @@
 
   @media screen and (max-width: 1024px) {
     .nav {width:80%;}
+  }
+
+@media screen and (max-width: 380px) {
+      .nav ul li {flex: 0 0 25%;}
   }

@@ -13,8 +13,14 @@ export default function Navigation() {
           <Link href="/">Home</Link> {path === "/" ? " ✔" : ""}
         </li>
         <li>
-          <Link href="/about-us">About Us</Link>
-          {path === "/about-us" ? " ✔" : ""}
+          <Link href="/React">React</Link>
+          {path === "/React" ? " ✔" : ""}
+        </li>
+        <li>
+          <Link href="/movies">Moives</Link> {path === "/movies" ? " ✔" : ""}
+        </li>
+        <li>
+          <Link href="/search">Search</Link> {path === "/search" ? " ✔" : ""}
         </li>
       </ul>
     </nav>

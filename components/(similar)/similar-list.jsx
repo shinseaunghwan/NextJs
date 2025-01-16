@@ -24,23 +24,23 @@ export default function SimilarList({ id }) {
       speed={1000}
       spaceBetween={50}
       slidesPerView={4}
-      autoplay={{ delay: 5000 }}
+      autoplay={{ delay: 8000 }}
       scrollbar={{ draggable: true }}
       breakpoints={{
         0: {
-          slidesPerView: 1,
+          slidesPerView: 2,
           spaceBetween: 20,
         },
         480: {
-          slidesPerView: 2,
+          slidesPerView: 3,
           spaceBetween: 40,
         },
         768: {
-          slidesPerView: 3,
+          slidesPerView: 4,
           spaceBetween: 50,
         },
         1240: {
-          slidesPerView: 4,
+          slidesPerView: 5,
           spaceBetween: 50,
         },
       }}

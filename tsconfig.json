@@ -21,14 +21,22 @@
       {
         "name": "next"
       }
-    ]
+    ],
+    "strictNullChecks": true
   },
   "include": [
     "next-env.d.ts",
     ".next/types/**/*.ts",
     "**/*.ts",
-    "**/*.tsx"
-, "components/navigation.tsx", "app/about-us/page.Tsx", "app/layout.tsx", "app/not-found.tsx", "app/about-us/layout.tsx", "app/(home)/page.tsx"  ],
+    "**/*.tsx",
+    "components/navigation.tsx",
+    "app/React/page.Tsx",
+    "app/layout.tsx",
+    "app/not-found.tsx",
+    "app/React/layout.tsx",
+    "app/(home)/page.tsx",
+    "components/(search)/search.js"
+, "components/(credits)/credit-list.jsx"  ],
   "exclude": [
     "node_modules"
   ]
