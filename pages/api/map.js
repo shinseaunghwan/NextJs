@@ -4,7 +4,7 @@ export default async function handler(req, res) {
   const client_secret = process.env.NEXT_PUBLIC_NAVER_CLIENT_SECRET;
 
   try {
-    const response = await fetch(`https://openapi.naver.com/v1/search/shop?query=${encodeURIComponent(query)}&display=10&start=1&sort=sim`, {
+    const response = await fetch(`https://openapi.naver.com/v1/search/local?query=${encodeURIComponent(query)}&display=10&start=1&sort=sim`, {
       headers: {
         'X-Naver-Client-Id': client_id,
         'X-Naver-Client-Secret': client_secret,

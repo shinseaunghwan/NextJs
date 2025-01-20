@@ -29,7 +29,7 @@ function LottoNumberGenerator() {
     }
 
     return (
-        <div>
+        <div className={ui.itembox}>
             <button className={ui.button} onClick={generateRandomNumbers}>로또 번호</button>
             {showNumbers && (
                 <ul style={{display:"flex", justifyContent:"space-evenly", marginTop: "1rem"}}>

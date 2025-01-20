@@ -13,7 +13,7 @@ export default function Reservation() {
     }
 
 return (
-<div>
+<div className={ui.itembox}>
 <form onSubmit={handleSubmit}>
 <label>
         아침식사 여부 :    

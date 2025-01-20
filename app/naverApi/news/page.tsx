@@ -1,5 +1,5 @@
 import NewsForm from "../../../components/(news)/NewsForm";
-
+import ui from "../../../styles/ui.module.css"
 
 export const metadata = {
   title: "News",
@@ -8,8 +8,9 @@ export const metadata = {
 export default function SearchPage() {
   return (
     <>
-      <h3>뉴스 검색</h3>
-      <NewsForm />
+    <h3>뉴스 검색</h3>
+        
+        <NewsForm />
     </>
   );
 }

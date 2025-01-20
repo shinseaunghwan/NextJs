@@ -2,7 +2,7 @@
 
 import React, {useState} from "react";
 import TemperatureInput from "./TemperatureInput";
-
+import ui from "../../styles/ui.module.css"
 function BoilingVerdict(props){
     if (props.celsius >= 100) {
         return <p> 섭씨 {props.celsius}도로 물이 끓습니다.</p>
@@ -48,7 +48,7 @@ export default function Calculator(props) {
     scale === "c" ? tryConvert(temperature, toFahrenheit) : temperature;
 
     return (
-        <div>
+        <div className={ui.itembox}>
             <TemperatureInput
             scale="c"
             temperature={celsius}

@@ -14,6 +14,7 @@ export default function AboutUs() {
               <Link href="/naverApi/news">네이버 뉴스</Link> 
               <Link href="/naverApi/books">네이버 서적</Link> 
               <Link href="/naverApi/shop">네이버 쇼핑</Link> 
+              <Link href="/naverApi/map">네이버 지역</Link> 
       </div>
     </>
   );

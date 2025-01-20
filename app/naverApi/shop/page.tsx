@@ -1,6 +1,5 @@
 import ShopForm from "../../../components/(shop)/shopForm";
 
-
 export const metadata = {
   title: "Shop",
 };

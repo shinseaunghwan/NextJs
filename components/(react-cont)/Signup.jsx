@@ -34,7 +34,7 @@ export default function SignUp() {
     };
 
 return (
-    <div>
+    <div className={ui.itembox}>
         <form onSubmit={handleSubmit}>
             <label>
                 이름 : &nbsp;

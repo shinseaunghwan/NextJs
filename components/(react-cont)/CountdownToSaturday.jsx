@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useState, useEffect } from "react";
-
+import ui from "../../styles/ui.module.css"
 function CountdownToSaturday() {
     const [remainingTime, setRemainingTime] = useState(null);
     const today = new Date();
@@ -40,7 +40,7 @@ function CountdownToSaturday() {
     }, []);
 
     return (
-        <div>
+        <div className={ui.itembox}>
             <p>({formatDate(today)}) 퇴근까지 {remainingTime}</p>
         </div>
     );

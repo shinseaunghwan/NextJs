@@ -2,8 +2,8 @@
 
 import { useState } from 'react';
 import DOMPurify from 'dompurify';
-import searchShop from './shop';
-import shop from './shop.module.css';
+import searchMap from './map';
+import map from './map.module.css';
 import ui from './../../styles/ui.module.css';
 import SearchInput from '../SearchInput';
 
@@ -16,7 +16,7 @@ export default function SearchForm() {
       alert('검색어를 입력하세요.');
       return;
     }
-    const data = await searchShop(query);
+    const data = await searchMap(query);
     setResults(data.items);
   };
 
@@ -26,9 +26,10 @@ export default function SearchForm() {
     }
   };
 
-  const createMarkup = (html) => {
+ const createMarkup = (html) => {
     return { __html: DOMPurify.sanitize(html) };
   };
+
 
   return (
     <>
@@ -38,22 +39,21 @@ export default function SearchForm() {
         handleKeyDown={handleKeyDown}
         handleSearch={handleSearch}
       />
+      
       {results.length > 0 ? (
-        <div className={shop.container}>
+        <div className={map.container}>
           {results.map((item) => (
-            <div className={shop.imgBox} key={item.id}>
-              <img src={item.image} alt={item.title} />
-              <div className={shop.contBox}>
-                <h3 dangerouslySetInnerHTML={createMarkup(item.title)} />
-                <p>{item.category1}</p>
-                <p>{item.lprice}원 ~ {item.hprice}</p>
-                <p>{item.pubdate}</p>
+            <div className={map.contBox} key={item.id}>
+               <h3 dangerouslySetInnerHTML={createMarkup(item.title)} />
+                <p>{item.description}</p>
+                <p>{item.category}</p>
+                <p>{item.telephone}</p>
+                <p>{item.address}</p>
                 <p>
                   <a className={ui.button} href={item.link} target="_blank">
                     자세히 보기
                   </a>
                 </p>
-              </div>
             </div>
           ))}
         </div>

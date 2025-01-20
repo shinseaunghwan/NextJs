@@ -36,7 +36,7 @@ export default function SearchForm() {
       {results.length > 0 ? (
       <div className={books.container}>
         {results.map((item) => (
-          <div className={books.imgBox} key={item.link}>
+          <div className={books.imgBox} key={item.id}>
             <img src={item.image} alt={item.title} />
             <div className={books.contBox}>
               <h3>{item.title}</h3>

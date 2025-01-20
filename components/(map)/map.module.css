@@ -1,0 +1,41 @@
+
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 25px;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+
+  .container .contBox{
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  .container .contBox p{
+    margin-top: .5rem;
+    line-height: 1.4;
+  }
+  
+
+  @media screen and (max-width: 1024px) {
+  .container .contBox p{
+    margin-top: 1rem;
+  }
+  }
+
+  @media screen and (max-width: 768px) {
+    .container {
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+
+  }
+
+  @media screen and (max-width: 360px) {
+
+  }

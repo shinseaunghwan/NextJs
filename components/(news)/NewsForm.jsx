@@ -41,7 +41,7 @@ export default function NewsForm() {
       {results.length > 0 ? (
       <div className={newsStyled.container}>
         {results.map((item) => (
-          <div className={newsStyled.newsBox} key={item.link}>
+          <div className={newsStyled.newsBox} key={item.id}>
             <h4 dangerouslySetInnerHTML={createMarkup(item.title)} />
             <p
               className={newsStyled.text}

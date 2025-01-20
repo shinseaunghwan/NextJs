@@ -24,15 +24,6 @@
   font-weight: 400;
 }
 
-.container > div {
-  margin-top: 1rem;
-    background-color: #fff;
-    padding: 1rem;
-    border-radius: 10px;
-    color: #111;
-}
-
-
   .container p {
   font-size: 1.5rem;
   font-weight: 500;
