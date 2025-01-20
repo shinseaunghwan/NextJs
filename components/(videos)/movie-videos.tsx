@@ -1,6 +1,6 @@
 
-import style from "../styles/movie-videos.module.css"
-import MovieList from "./(videos)/movie-list";
+import style from "../(videos)/(moviecss)/movie-videos.module.css"
+import MovieList from "./(video)/movie-list";
 
 
 

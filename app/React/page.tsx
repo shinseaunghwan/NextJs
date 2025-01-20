@@ -1,4 +1,4 @@
-import react from "../../styles/react.module.css"
+
 import Clock from "../../components/(react-cont)/Clock"
 import Calculator from "../../components/(react-cont)/Calculator"
 import Lotto from "../../components/(react-cont)/Lotto"
@@ -12,7 +12,7 @@ export const metadata = {
 
 export default function AboutUs() {
   return (
-    <div className={react.container}>
+    <>
       <h3>React</h3>
       <Clock />
       <CountdownToSaturday />
@@ -20,7 +20,6 @@ export default function AboutUs() {
       <Lotto />
       <Reservation />
       <Signup />
-
-    </div>
+      </>
   );
 }

@@ -1,4 +1,4 @@
-import style from "../styles/movie-credits.module.css"
+import style from "../(videos)/(moviecss)/movie-credits.module.css"
 import CreditsList from "./(credits)/credit-list";
 
 export default function MovieCredits({ id }: { id: string }) {

@@ -1,5 +1,5 @@
 "use client"
-
+import ui from "../../styles/ui.module.css"
 import React, { useState, useEffect } from 'react';
 
 function Clock() {
@@ -29,7 +29,7 @@ function Clock() {
   return (
     <div>
       <p style={{ margin: "1rem 0", color: color }}>현재 시간은 {time.toLocaleTimeString()}</p>
-      <button style={{ margin: "1rem 0"}} onClick={() => setColor(getRandomColor())}>색상변경 버튼</button>
+      <button className={ui.button} style={{ margin: "1rem 0"}} onClick={() => setColor(getRandomColor())}>색상변경 버튼</button>
     </div>
   );
 }

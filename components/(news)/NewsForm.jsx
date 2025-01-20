@@ -4,12 +4,14 @@ import { useState } from 'react';
 import DOMPurify from 'dompurify';
 import news from './news';
 import newsStyled from './news.module.css';
+import ui from './../../styles/ui.module.css'
+import SearchInput from '../SearchInput';
 
 export default function NewsForm() {
   const [query, setQuery] = useState('');
   const [results, setResults] = useState([]);
 
-  const handleNews = async () => {
+  const handleSearch = async () => {
     if (!query.trim()) {
       alert('검색어를 입력하세요.');
       return;
@@ -20,7 +22,7 @@ export default function NewsForm() {
 
   const handleKeyDown = (e) => {
     if (e.key === 'Enter') {
-      handleNews();
+      handleSearch();
     }
   };
 
@@ -29,28 +31,32 @@ export default function NewsForm() {
   };
 
   return (
-    <div className={newsStyled.inputBox}>
-      <input
-        type="text"
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-        onKeyDown={handleKeyDown}
-        placeholder="검색어를 입력하세요"
+    <>
+    <SearchInput
+        query={query}
+        setQuery={setQuery}
+        handleKeyDown={handleKeyDown}
+        handleSearch={handleSearch}
       />
-      <button onClick={handleNews}>검색</button>
-
+      {results.length > 0 ? (
       <div className={newsStyled.container}>
         {results.map((item) => (
           <div className={newsStyled.newsBox} key={item.link}>
             <h4 dangerouslySetInnerHTML={createMarkup(item.title)} />
-            <p className={newsStyled.text} dangerouslySetInnerHTML={createMarkup(item.description)} />
+            <p
+              className={newsStyled.text}
+              dangerouslySetInnerHTML={createMarkup(item.description)}
+            />
             <div className={newsStyled.datelinkBox}>
-            <p className={newsStyled.date}>{item.pubDate}</p>
-              <a href={item.link} target="_blank" title={item.title}>뉴스 더보기</a>
-              </div>
+              <p className={newsStyled.date}>{item.pubDate}</p>
+              <a className={ui.button2} href={item.link} target="_blank" title={item.title}>
+                뉴스 더보기
+              </a>
+            </div>
           </div>
         ))}
       </div>
-    </div>
+      ): null}
+    </>
   );
 }

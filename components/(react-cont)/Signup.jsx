@@ -1,6 +1,7 @@
 "use client"
 
 import React, {useState} from "react";
+import ui from "../../styles/ui.module.css"
 
 export default function SignUp() {
     const [name, setName] = useState("")
@@ -49,7 +50,7 @@ return (
                     <option value="남자">남자</option>
                     <option value="여자">여자</option>
                 </select>
-                <button style={{marginLeft:".5rem"}} type="submit">제출</button>
+                <button className={ui.button} style={{marginLeft:".5rem"}} type="submit">제출</button>
             </label>
     
         </form>

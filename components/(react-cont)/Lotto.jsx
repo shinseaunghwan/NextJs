@@ -1,5 +1,5 @@
 "use client"
-
+import ui from "../../styles/ui.module.css"
 import React, { useState, useEffect } from "react";
 
 function LottoNumberGenerator() {
@@ -30,7 +30,7 @@ function LottoNumberGenerator() {
 
     return (
         <div>
-            <button onClick={generateRandomNumbers}>로또 번호</button>
+            <button className={ui.button} onClick={generateRandomNumbers}>로또 번호</button>
             {showNumbers && (
                 <ul style={{display:"flex", justifyContent:"space-evenly", marginTop: "1rem"}}>
                     {lottoNumbers.map((number) => (

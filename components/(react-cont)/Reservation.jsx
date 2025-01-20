@@ -1,5 +1,5 @@
 "use client"
-
+import ui from "../../styles/ui.module.css"
 import { useState } from "react";
 import React from "react";
 
@@ -36,7 +36,7 @@ return (
         }}
         ></input>
     </label>
-    <button type="submit">제출</button>
+    <button className={ui.button} type="submit">제출</button>
 </form>
 </div>
 )

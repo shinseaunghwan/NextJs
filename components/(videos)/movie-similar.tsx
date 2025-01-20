@@ -1,5 +1,5 @@
 import SimilarList from "./(similar)/similar-list";
-import style from "../styles/movie-similar.module.css"
+import style from "../(videos)/(moviecss)/movie-similar.module.css"
 
 export default function MovieSimilar({ id }: { id: string }) {
   return (

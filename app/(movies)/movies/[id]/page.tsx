@@ -1,8 +1,8 @@
 import { Suspense } from "react";
-import MovieInfo, { getMovie } from "../../../../components/movie-info";
-import MovieVideos from "../../../../components/movie-videos";
-import MovieSimilar from "../../../../components/movie-similar";
-import MovieCredits from "../../../../components/movie-credits";
+import MovieInfo, { getMovie } from "../../../../components/(videos)/movie-info";
+import MovieVideos from "../../../../components/(videos)/movie-videos";
+import MovieSimilar from "../../../../components/(videos)/movie-similar";
+import MovieCredits from "../../../../components/(videos)/movie-credits";
 
 
 type IParams = Promise<{ id: string }>

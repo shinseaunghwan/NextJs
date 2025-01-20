@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import searchImages from './searchImages';
 import search from './search.module.css'
+import SearchInput from '../SearchInput';
 
 export default function SearchForm() {
   const [query, setQuery] = useState('');
@@ -24,25 +25,24 @@ export default function SearchForm() {
   };
 
   return (
-    <div className={search.inputBox}>
-      <input
-        type="text"
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-        onKeyDown={handleKeyDown}
-        placeholder="검색어를 입력하세요"
-      />
-      <button onClick={handleSearch}>검색</button>
-
-      <div className={search.container}>
-        
-        {results.map((item) => (
-          <div className={search.imgBox} key={item.link}>
-            <img src={item.thumbnail} alt={item.title} />
-            <p>{item.title}</p>
-          </div>
-        ))}
-      </div>
+    <>
+    <SearchInput
+            query={query}
+            setQuery={setQuery}
+            handleKeyDown={handleKeyDown}
+            handleSearch={handleSearch}
+          />
+      {results.length > 0 ? (
+        <div className={search.container}>
+      {results.map((item) => (
+        <div className={search.imgBox} key={item.link}>
+          <img src={item.thumbnail} alt={item.title} />
+          <p>{item.title}</p>
+        </div>
+      ))}
     </div>
+    ): null}
+    </>
+
   );
 }

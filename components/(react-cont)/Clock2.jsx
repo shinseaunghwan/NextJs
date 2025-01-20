@@ -16,9 +16,9 @@ function Clock2() {
   }, []);
 
   return (
-    <div>
+    <>
       <p>현재 시간은 {time.toLocaleTimeString()}</p>
-    </div>
+    </>
   );
 }
 

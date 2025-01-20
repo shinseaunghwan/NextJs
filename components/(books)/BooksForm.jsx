@@ -2,7 +2,9 @@
 
 import { useState } from 'react';
 import searchBooks from './searchBooks';
-import search from './search.module.css'
+import books from './books.module.css'
+import ui from './../../styles/ui.module.css'
+import SearchInput from '../SearchInput';
 
 export default function SearchForm() {
   const [query, setQuery] = useState('');
@@ -24,30 +26,35 @@ export default function SearchForm() {
   };
 
   return (
-    <div className={search.inputBox}>
-      <input
-        type="text"
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-        onKeyDown={handleKeyDown}
-        placeholder="검색어를 입력하세요"
+    <>
+<SearchInput
+        query={query}
+        setQuery={setQuery}
+        handleKeyDown={handleKeyDown}
+        handleSearch={handleSearch}
       />
-      <button onClick={handleSearch}>검색</button>
-
-      <div className={search.container}>
-        
+      {results.length > 0 ? (
+      <div className={books.container}>
         {results.map((item) => (
-          <div className={search.imgBox} key={item.link}>
+          <div className={books.imgBox} key={item.link}>
             <img src={item.image} alt={item.title} />
-            <h3>{item.title}</h3>
-            <p>{item.author}</p>
-            <p>{item.description}</p>
-            <p>{item.discount}</p>
-            <p>{item.publisher}</p>
-            <p>{item.pubdate}</p>
+            <div className={books.contBox}>
+              <h3>{item.title}</h3>
+              <h4>{item.author}</h4>
+              <p>{item.description}</p>
+              <p>{item.discount}원</p>
+              <p>{item.publisher}</p>
+              <p>{item.pubdate}</p>
+              <p>
+                <a className={ui.button} href={item.link} target="_blank">
+                  자세히 보기
+                </a>
+              </p>
+            </div>
           </div>
         ))}
       </div>
-    </div>
+      ) : null}
+    </>
   );
 }

@@ -1,5 +1,4 @@
 import Clock2 from "../../components/(react-cont)/Clock2";
-import home from "../../styles/home.module.css"
 
 export const metadata = {
   title: "Home",
@@ -7,9 +6,11 @@ export const metadata = {
 
 export default function HomePage() {
   return (
-    <div className={home.container}>
-      <h3>Home</h3>
+    <>
+    <h3>Home</h3>
+    <div>
       <Clock2 />
     </div>
+    </>
   );
 }
