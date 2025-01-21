@@ -1,5 +1,5 @@
 import Link from "next/link";
-import naver from "../../styles/ui.module.css"
+import ui from "../../styles/ui.module.css"
 
 export const metadata = {
   title: "NaverApi",
@@ -8,8 +8,8 @@ export const metadata = {
 export default function AboutUs() {
   return (
     <>
-      <h3>Naver Api</h3>
-      <div className={naver.linkBox}>
+      <h3 className={ui.pc_green}>Naver Api</h3>
+      <div className={ui.linkBox}>
               <Link href="/naverApi/search">네이버 이미지</Link>
               <Link href="/naverApi/news">네이버 뉴스</Link> 
               <Link href="/naverApi/books">네이버 서적</Link> 

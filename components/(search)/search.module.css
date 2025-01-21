@@ -1,17 +1,16 @@
 .container {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    gap: 25px;
-    margin: 0 auto;
+    gap: 1rem;
+    margin: 1rem auto 0;
   }
 
   .container .imgBox {
-    margin-top: 1rem;
     display: grid;
     grid-template-columns: 1fr 4fr;
     gap: 20px;
     border-radius: 10px;
-    box-shadow: 2px 2px 2px rgb(158, 158, 158);
+    border: 2px solid #e9e9ec;
     padding: 1rem;
   }
 

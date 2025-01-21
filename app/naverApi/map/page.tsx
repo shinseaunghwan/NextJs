@@ -8,7 +8,7 @@ export const metadata = {
 export default function MapPage() {
   return (
     <>
-    <h3>네이버 지도</h3>
+    <h3 className={ui.pc_green}>네이버 지도</h3>
         <MapForm />
     </>
   );

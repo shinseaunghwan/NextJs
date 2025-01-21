@@ -36,17 +36,17 @@ export default function SignUp() {
 return (
     <div className={ui.itembox}>
         <form onSubmit={handleSubmit}>
-            <label>
+            <label className={ui.mgl10}>
                 이름 : &nbsp;
-                <input type="text" value={name} onChange={handleChangeName} />
+                <input className={ui.input} type="text" value={name} onChange={handleChangeName} />
             </label>
-            <label>
+            <label className={ui.mgl10}>
                 나이 : &nbsp;
-                <input type="number" value={year} onChange={handleChangeYear}/>
+                <input className={ui.input} type="number" value={year} onChange={handleChangeYear}/>
             </label>
-            <label>
+            <label className={ui.mgl10}>
                 성별 : &nbsp;
-                <select value={gender} onChange={handleChangeGender}>
+                <select className={ui.select} value={gender} onChange={handleChangeGender}>
                     <option value="남자">남자</option>
                     <option value="여자">여자</option>
                 </select>

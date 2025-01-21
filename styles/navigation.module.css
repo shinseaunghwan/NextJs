@@ -1,26 +1,45 @@
 .nav {
-    background-color: #00000063;
+    background-color: #000000;
+    color: #fff;
     position: fixed;
-    width: 50%;
-    margin: 0 auto;
-    top: 20px;
-    border-radius: 10px;
+    width: 100%;
+    top: 0px;
     padding: 20px 0px;
     left: 50%;
     z-index: 10;
     transform: translateX(-50%);
-    transition: top 0.3s
+    transition: top 0.3s;
+  }
+
+  .arrow {
+    position: absolute;
+    top: -10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: .5rem;
+  }
+  .bgColorNaverApi {
+    background-color: #2db400;
+    color: #fff;
   }
   
-.show { top: 0; }
-.hide { top: -100px; /* Adjust this value based on the height of your nav */ }
+  .bgColorBlack {
+    background-color: #000;
+    color: #fff;
+  }
+  
+.show { top: 0px; }
+.hide { top: -100px;}
 
   .nav ul {
+    margin: 0 auto;
+    max-width: 1400px;
     display: flex;
     justify-content: center;
   }
   
   .nav ul li {
+    position: relative;
     flex: 1;
     text-align: center;
     list-style: none;
@@ -33,7 +52,6 @@
   }
 
   @media screen and (max-width: 1024px) {
-    .nav {width:80%;}
   }
 
 @media screen and (max-width: 380px) {

@@ -49,7 +49,7 @@ export default function SearchForm() {
                 <p>{item.lprice}원 ~ {item.hprice}</p>
                 <p>{item.pubdate}</p>
                 <p>
-                  <a className={ui.button} href={item.link} target="_blank">
+                  <a className={ui.button3} href={item.link} target="_blank">
                     자세히 보기
                   </a>
                 </p>

@@ -4,8 +4,18 @@
     padding: 1rem;
     border-radius: 10px;
     color: #111;
+    border: 2px solid #111;
 }
 
+.mgt10 + .mgt10 {
+  margin-top:1rem;
+}
+.mgt10 {
+  margin-top: 1rem;
+}
+.mgl10 + .mgl10 {
+  margin-left:.5rem;
+}
 
 .button {
   display: inline-block;
@@ -19,35 +29,53 @@
     background-color: #111;
     font-weight: 500;
     color: #fff;
-    box-shadow: 2px 2px 2px #eee;
     cursor: pointer;
     transition: all .35s;
   }
   * + .button {margin-left: .5rem;}
   * + .button2 {margin-left: .5rem;}
-
+  * + .button3 {margin-left: .5rem;}
 
   .button:hover {
-    background-color: #555;
+    background-color: #000000;
   }
 
   .button2 {
-    margin-top: .5rem;
     display: inline-block;
-    padding: 8px 16px;
-    font-size: 16px;
-    border-width: 1px;
-    border-radius: 8px;
-    border: none;
-    background-color: #FF5555;
-    font-weight: 700;
-    color: #fff;
-    box-shadow: 2px 2px 2px #eee;
-    cursor: pointer;
-    transition: all .35s;
+    text-align: center;
+    max-width: 320px;
+      padding: 8px 16px;
+      font-size: 16px;
+      border-width: 1px;
+      border-radius: 8px;
+      border: none;
+      background-color: #FF5555;
+      font-weight: 500;
+      color: #fff;
+      cursor: pointer;
+      transition: all .35s;
   }
   .button2:hover{
     background-color: #dd0000;
+  }
+  
+  .button3 {
+    display: inline-block;
+    text-align: center;
+    max-width: 320px;
+      padding: 8px 16px;
+      font-size: 16px;
+      border-width: 1px;
+      border-radius: 8px;
+      border: none;
+      background-color: #2db400;
+      font-weight: 500;
+      color: #fff;
+      cursor: pointer;
+      transition: all .35s;
+  }
+  .button3:hover{
+    background-color: #2db400;
   }
   
 
@@ -61,9 +89,22 @@
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
+    border: 2px solid #2db400;
   }
 
   .input {
+    padding: 8px 16px;
+    font-size: 16px;
+    border-width: 1px;
+    border-radius: 8px;
+    font-weight: 500;
+    color: #111;
+    border: 1px solid #333;
+    transition: all .35s;
+  }
+
+  /* .input:hover,.input:focus {border:2px solid #2db400 !important;} */
+  .select {
     padding: 8px 16px;
     font-size: 16px;
     border-width: 1px;
@@ -80,6 +121,7 @@
     padding: 1rem;
     border-radius: 10px;
     color: #111;
+    border: 2px solid #2db400;
   }
 
 .linkBox a {
@@ -91,19 +133,29 @@
     font-weight: 700;
     border-radius: 8px;
     border: none;
-    background-color: #627df3;
+    background-color: #2db400;
     font-weight: 500;
     color: #fff;
     cursor: pointer;
     transition: all .35s;
   }
 .linkBox a:hover {
-    background-color: #0024c5;
+    background-color: #1c7000;
   }
 .linkBox a + a {
     margin-top: 1rem;
   }
 
+  /* 텍스트 요소 :폰트컬러 타입 */
+.pc_gray { color:#333 !important; }
+.pc_black { color:#000 !important; }
+.pc_blue { color:#007dda !important; }
+.pc_sky { color:#259bff !important; }
+.pc_red { color:#dd0000 !important; }
+.pc_navy { color:#0b41a0 !important; }
+.pc_org { color:#ff620d !important; }
+.pc_yellow { color:#eb8809 !important; }
+.pc_green {color: #2db400 !important;}
 
 
   @media screen and (max-width: 480px) {

@@ -5,17 +5,16 @@
     grid-template-columns: repeat(1, 1fr);
     gap: 25px;
     width: 100%;
-    margin: 0 auto;
+    margin: 1rem auto 0;
     box-sizing: border-box;
   }
 
   .container .imgBox {
-    margin-top: 1rem;
     display: grid;
     grid-template-columns: 1fr 4fr;
-    gap: 20px;
+    gap: 1rem;
     border-radius: 10px;
-    box-shadow: 2px 2px 2px rgb(158, 158, 158);
+    border: 2px solid #e9e9ec;
     padding: 1rem;
   }
 
@@ -56,7 +55,7 @@
       text-align: center;
     }
   .container .contBox p{
-    margin-top: 1rem;
+    margin-top: .5rem;
     text-align: center;
   }
   }

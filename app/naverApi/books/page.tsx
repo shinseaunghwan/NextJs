@@ -8,7 +8,7 @@ export const metadata = {
 export default function BooksPage() {
   return (
     <>
-    <h3>서적 검색</h3>
+    <h3 className={ui.pc_green}>서적 검색</h3>
         <BooksForm />
     </>
   );

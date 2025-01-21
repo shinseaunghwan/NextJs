@@ -49,7 +49,7 @@ export default function NewsForm() {
             />
             <div className={newsStyled.datelinkBox}>
               <p className={newsStyled.date}>{item.pubDate}</p>
-              <a className={ui.button2} href={item.link} target="_blank" title={item.title}>
+              <a className={`${ui.button2} ${ui.mgt10}`} href={item.link} target="_blank" title={item.title}>
                 뉴스 더보기
               </a>
             </div>

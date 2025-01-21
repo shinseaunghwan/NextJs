@@ -17,7 +17,7 @@ return (
 <form onSubmit={handleSubmit}>
 <label>
         아침식사 여부 :    
-        <input
+        <input className={ui.input}
         type="checkbox"
         value={haveBreakfast}
         onChange={(e)=> {
@@ -28,7 +28,7 @@ return (
         </label>
     <label>
         방문객 수 :
-        <input
+        <input className={ui.input}
         type="number"
         value={numberOfGuest}
         onChange={(e)=> {

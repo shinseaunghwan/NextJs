@@ -3,16 +3,19 @@
 .container {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    gap: 25px;
     width: 100%;
-    margin: 0 auto;
+    gap: 1rem;
+    margin: 1rem auto 0;
     box-sizing: border-box;
   }
 
 
   .container .contBox{
-    margin-top: 1rem;
+    border-radius: 10px;
+    border: 2px solid #e9e9ec;
+    padding: 1rem;
     text-align: center;
+
   }
 
   .container .contBox p{

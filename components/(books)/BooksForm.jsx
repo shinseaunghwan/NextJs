@@ -46,7 +46,7 @@ export default function SearchForm() {
               <p>{item.publisher}</p>
               <p>{item.pubdate}</p>
               <p>
-                <a className={ui.button} href={item.link} target="_blank">
+                <a className={ui.button3} href={item.link} target="_blank">
                   자세히 보기
                 </a>
               </p>

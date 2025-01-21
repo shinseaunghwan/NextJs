@@ -7,7 +7,7 @@ export const metadata = {
 export default function SearchPage() {
   return (
    <>
-         <h3>이미지 검색</h3>
+         <h3 className={ui.pc_green}>이미지 검색</h3>
         <SearchForm />
    </>
   );

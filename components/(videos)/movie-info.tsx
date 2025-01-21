@@ -1,4 +1,6 @@
 import style from "../(videos)/(moviecss)/movie-info.module.css"
+import ui from "../../styles/ui.module.css"
+
 import { API_URL } from "../../app/constants";
 
 export async function getMovie(id: string) {
@@ -17,7 +19,7 @@ export default async function MovieInfo({ id }: { id: string }) {
         <h3>⭐ {movie.vote_average.toFixed(1)} </h3>
         <p> {movie.overview} </p>
         <span> {movie.release_date} </span>
-        <a href={movie.homepage} target={"_blank"}>HomePage &rarr;</a>
+        <div><a className={ui.button} href={movie.homepage} target={"_blank"}>HomePage &rarr;</a></div>
       </div>
     </div>
   );

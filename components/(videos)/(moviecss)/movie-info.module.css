@@ -62,7 +62,7 @@
 
     .container {
       margin-top: 3rem;
-      grid-template-rows: 1fr 1fr;
+      /* grid-template-rows: 1fr 1fr; */
       grid-template-columns: none;
       gap:10px;
     }
