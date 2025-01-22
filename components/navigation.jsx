@@ -7,7 +7,7 @@ import styles from "../styles/navigation.module.css";
 
 export default function Navigation( ) {
   const [showNav, setShowNav] = useState(true);
-  const [bg, setBg] = useState(true);
+  const [bg, setBg] = useState(false);
   const path = usePathname();
 
   useEffect(() => {
