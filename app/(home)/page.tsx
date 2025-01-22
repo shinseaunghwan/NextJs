@@ -11,7 +11,7 @@ export default function HomePage() {
     <h3>Home</h3>
       <Clock2 />
       <div className={ui.itembox}>
-        <h5>승환 열심히 개발중</h5>
+        <h5>리엑트 공부중</h5>
       </div>
     </>
   );
