@@ -1,6 +1,7 @@
 .movie {
     display: grid;
     grid-template-rows: 1fr auto;
+    grid-gap: 20px;
     gap: 20px;
     cursor: pointer;
     place-items: center;
