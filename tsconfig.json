@@ -36,7 +36,7 @@
     "app/React/layout.tsx",
     "app/(home)/page.tsx",
     "components/(search)/search.js"
-, "components/(credits)/credit-list.jsx", "components/(videos)/(video)/movie-list.jsx", "components/(similar)/similar-list.jsx", "components/(search)/SearchForm.jsx"  ],
+, "components/(credits)/credit-list.jsx", "components/(videos)/(video)/movie-list.jsx", "components/(similar)/similar-list.jsx", "components/(search)/SearchForm.jsx", "components/TabBox.jsx"  ],
   "exclude": [
     "node_modules"
   ]

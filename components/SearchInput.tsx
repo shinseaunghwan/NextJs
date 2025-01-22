@@ -4,14 +4,13 @@ export default function SearchInput({ query, setQuery, handleKeyDown, handleSear
   return (
     <div className={ui.inputBox}>
       <input
-        className={ui.input}
         type="text"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         onKeyDown={handleKeyDown}
         placeholder="검색어를 입력하세요"
       />
-      <button className={ui.button3} onClick={handleSearch}>
+      <button onClick={handleSearch}>
         검색
       </button>
     </div>
