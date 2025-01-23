@@ -2,6 +2,9 @@ import "../styles/global.css";
 import { Metadata } from "next";
 import Navigation from "../components/navigation";
 import layout from "../styles/layout.module.css";
+import { config } from '@fortawesome/fontawesome-svg-core';
+import '@fortawesome/fontawesome-svg-core/styles.css';
+config.autoAddCss = false;
 
 export const metadata: Metadata = {
   title: {
@@ -10,6 +13,7 @@ export const metadata: Metadata = {
   },
   description: "NextJs framework",
 };
+
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (

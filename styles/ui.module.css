@@ -6,6 +6,7 @@
     color: #111;
     border: 2px solid #111;
 }
+.icon {display: inline-block; max-width: 25px; width: 100%; height: auto;}
 
 .mgt10 + .mgt10 {
   margin-top:1rem;
@@ -226,6 +227,32 @@
   right: 0%;
   transform: translate(-30%, -50%);
 }
+
+.loadingBox {
+  width: 100%;
+}
+ 
+.loadingBox svg {
+  position: fixed;
+  transform: translate(-50%, -50%);
+  top: 20%;
+  left: 40%;
+  z-index: 10;
+  width: 100px;
+  height: auto;
+  display: inline-block;
+  animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
 
   @media screen and (max-width: 480px) {
     .inputBox button{

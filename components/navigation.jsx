@@ -4,9 +4,11 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import styles from "../styles/navigation.module.css";
+import Translate from "../components/translate"
 
 export default function Navigation( ) {
   const [showNav, setShowNav] = useState(true);
+  const [showTl, setShowTl] = useState(true);
   const [bg, setBg] = useState(false);
   const path = usePathname();
 
@@ -32,7 +34,7 @@ export default function Navigation( ) {
   useEffect(() => {
     const isNaverApi = path.startsWith("/naverApi");
     const isMovies = path.startsWith("/movies");
-
+    const isMovies2 = path.startsWith("/movies/");
     document.body.classList.toggle("bgColorBlack", isMovies);
     if (isNaverApi) {
       setBg(true)
@@ -40,10 +42,17 @@ export default function Navigation( ) {
       setBg(false)
     }
 
+    if (isMovies2) {
+      setShowTl(true)
+    } else {
+      setShowTl(false)
+    }
+
   }, [path]);
   
   
   return (
+    <>
     <nav className={`${styles.nav} ${showNav ? styles.show : styles.hide} ${bg ? styles.bgColorNaverApi : styles.bgColorBlack}`}>
       <ul>
         <li>
@@ -60,5 +69,7 @@ export default function Navigation( ) {
         </li>
       </ul>
     </nav>
+    {showTl ? (<Translate/>) : ""}
+    </>
   );
 }
