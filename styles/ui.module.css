@@ -33,9 +33,9 @@
     cursor: pointer;
     transition: all .35s;
   }
-  * + .button {margin-left: .5rem;}
+  /* * + .button {margin-left: .5rem;}
   * + .button2 {margin-left: .5rem;}
-  * + .button3 {margin-left: .5rem;}
+  * + .button3 {margin-left: .5rem;} */
 
   .button:hover {
     background-color: #000000;

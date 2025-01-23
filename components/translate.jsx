@@ -20,7 +20,7 @@ export default function Translate() {
         function googleTranslateElementInit() {
           new google.translate.TranslateElement({
             pageLanguage: 'ko',
-            includedLanguages: 'en,ja',
+            includedLanguages: 'en,ko,ja',
             layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
           }, 'google_translate_element');
         }

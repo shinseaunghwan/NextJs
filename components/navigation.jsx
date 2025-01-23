@@ -34,22 +34,12 @@ export default function Navigation( ) {
   useEffect(() => {
     const isNaverApi = path.startsWith("/naverApi");
     const isMovies = path.startsWith("/movies");
-    const isMovies2 = path.startsWith("/movies/");
+    const isTranslate = path.startsWith("/movies/");
     document.body.classList.toggle("bgColorBlack", isMovies);
-    if (isNaverApi) {
-      setBg(true)
-    } else {
-      setBg(false)
-    }
+    setBg(isNaverApi);
+    setShowTl(isTranslate);
+}, [path]);
 
-    if (isMovies2) {
-      setShowTl(true)
-    } else {
-      setShowTl(false)
-    }
-
-  }, [path]);
-  
   
   return (
     <>
@@ -69,7 +59,7 @@ export default function Navigation( ) {
         </li>
       </ul>
     </nav>
-    {showTl ? (<Translate/>) : ""}
+    {showTl && <Translate />}
     </>
   );
 }
