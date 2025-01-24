@@ -1,3 +1,22 @@
+  /* 텍스트 요소 :폰트컬러 타입 */
+  .pc_gray { color:#333 !important; }
+  .pc_black { color:#000 !important; }
+  .pc_blue { color:#007dda !important; }
+  .pc_sky { color:#259bff !important; }
+  .pc_red { color:#dd0000 !important; }
+  .pc_navy { color:#0b41a0 !important; }
+  .pc_org { color:#ff620d !important; }
+  .pc_yellow { color:#eb8809 !important; }
+  .pc_green {color: #2db400 !important;}
+  
+.icon {display: inline-block; max-width: 25px; width: 100%; height: auto;}
+.mgt10 + .mgt10 {margin-top:1rem;}
+.mgt10 {margin-top: 1rem;}
+.mgl10 + .mgl10 {margin-left:.5rem;}
+
+.list_st1 {font-size: 1rem; font-weight: 500; list-style-type: disc; padding-left: 1rem;}
+.list_st1 li {text-align: left;}
+
 .itembox {
   margin-top: 1rem;
     background-color: #fff;
@@ -6,17 +25,7 @@
     color: #111;
     border: 2px solid #111;
 }
-.icon {display: inline-block; max-width: 25px; width: 100%; height: auto;}
 
-.mgt10 + .mgt10 {
-  margin-top:1rem;
-}
-.mgt10 {
-  margin-top: 1rem;
-}
-.mgl10 + .mgl10 {
-  margin-left:.5rem;
-}
 
 .button {
   display: inline-block;
@@ -144,7 +153,20 @@
     border-radius: 8px;
     font-weight: 500;
     color: #111;
-    box-shadow: 2px 2px 2px #eee;
+    transition: all .35s;
+  }
+
+  .translateSelect {
+    position: absolute;
+  top: 4.5rem;
+  right: .5rem;
+  display: inline-block;
+    padding: 4px 8px;
+    font-size: 16px;
+    border-width: 1px;
+    border-radius: 8px;
+    font-weight: 500;
+    color: #111;
     transition: all .35s;
   }
 
@@ -179,16 +201,6 @@
     margin-top: 1rem;
   }
 
-  /* 텍스트 요소 :폰트컬러 타입 */
-.pc_gray { color:#333 !important; }
-.pc_black { color:#000 !important; }
-.pc_blue { color:#007dda !important; }
-.pc_sky { color:#259bff !important; }
-.pc_red { color:#dd0000 !important; }
-.pc_navy { color:#0b41a0 !important; }
-.pc_org { color:#ff620d !important; }
-.pc_yellow { color:#eb8809 !important; }
-.pc_green {color: #2db400 !important;}
 
 .tabbox {
   margin-top: 1rem;

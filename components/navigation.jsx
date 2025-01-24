@@ -59,7 +59,7 @@ export default function Navigation( ) {
         </li>
       </ul>
     </nav>
-    {showTl && <Translate />}
+    {showTl ? (<div className={styles.displayshow}><Translate /></div>) : (<div className={styles.displayhide}><Translate /></div>)}
     </>
   );
 }

@@ -154,24 +154,10 @@ a {
 }
 
 /* Translate.css */
-#google_translate_element {
-  position: absolute;
-  top: 4.5rem;
-  right: .5rem;
-  display: inline-block;
-}
-#google_translate_element .skiptranslate {display: inline-block; font-size: 0px;}
 
-.goog-te-combo {
-  border-radius: 10px;
-  padding: .25rem;
-  font-size: 1rem;
-  color: #333;
-  border: 1px solid #fff;
-}
-/* .skiptranslate {display: none;} */
+/* .skiptranslate {display: none;}
 .skiptranslate > iframe {bottom: 0; top: auto;}
-#google_translate_element span {display: none;}
+#google_translate_element span {display: none;} */
 
 @media screen and (max-width: 768px) {
 

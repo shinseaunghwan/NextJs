@@ -30,7 +30,8 @@
   
 .show { top: 0px; }
 .hide { top: -100px;}
-
+.displayshow {display: block;}
+.displayhide {display: none;}
   .nav ul {
     margin: 0 auto;
     max-width: 1400px;

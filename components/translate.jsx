@@ -1,37 +1,54 @@
 "use client";
 
-import { useEffect, useRef } from 'react';
+import Script from "next/script";
+import React, { useEffect, useState } from "react";
+import ui from "../styles/ui.module.css"
 
-export default function Translate() {
-  const scriptAdded = useRef(false);
+const languages = [
+    { label: "영어", value: "en", src: "https://flagcdn.com/h60/us.png" },
+    { label: "한국어", value: "ko", src: "https://flagcdn.com/h60/kr.png" },
+    { label: "일본어", value: "ja", src: "https://flagcdn.com/h60/ja.png" },
+];
 
-  useEffect(() => {
-    if (!scriptAdded.current) {
-      scriptAdded.current = true;
 
-      const script = document.createElement('script');
-      script.src = "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
-      script.type = "text/javascript";
-      script.async = true;
-      document.head.appendChild(script);
+function googleTranslateElementInit() {
+    new window.google.translate.TranslateElement({
+        pageLanguage: "auto",
+        includedLanguages: languages.map(lang => lang.value).join(","),
+    }, "google_translate_element");
+}
 
-      const initScript = document.createElement('script');
-      initScript.innerHTML = `
-        function googleTranslateElementInit() {
-          new google.translate.TranslateElement({
-            pageLanguage: 'ko',
-            includedLanguages: 'en,ko,ja',
-            layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
-          }, 'google_translate_element');
-        }
-      `;
-      document.body.appendChild(initScript);
-    }
-  }, []);
+export default function GoogleTranslate({ prefLangCookie }) {
+    const [langCookie, setLangCookie] = useState(decodeURIComponent(prefLangCookie));
 
-  return (
-    <>
-      <div id="google_translate_element"></div>
-    </>
-  );
+    useEffect(() => {
+        window.googleTranslateElementInit = googleTranslateElementInit;
+    }, []);
+
+    const onChange = (value) => {
+        const lang = `/en/${value}`;
+        setLangCookie(lang);
+        const element = document.querySelector(".goog-te-combo");
+        element.value = value;
+        element.dispatchEvent(new Event("change"));
+    };
+
+    return (
+        <>
+            <div id="google_translate_element" style={{ display: "none", visibility: "hidden", width: "1px", height: "1px" }}></div>
+            <LanguageSelector onChange={onChange} value={langCookie} />
+            <Script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" strategy="afterInteractive" />
+        </>
+    );
+}
+
+function LanguageSelector({ onChange, value }) {
+    const selectedLang = value.split("/")[2];
+    return (
+        <select className={ui.translateSelect} onChange={(e) => onChange(e.target.value)} value={selectedLang}>
+            {languages.map((lang) => (
+                <option value={lang.value} key={lang.value}>{lang.label}</option>
+            ))}
+        </select>
+    );
 }
